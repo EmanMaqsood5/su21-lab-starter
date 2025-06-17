@@ -93,7 +93,7 @@ done:
     lw s0, 4(sp)
     lw s1, 8(sp)
     addi sp, sp, 12
-    jr ra
+
 
     jr ra # Return to caller
 
