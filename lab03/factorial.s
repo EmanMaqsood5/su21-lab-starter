@@ -19,6 +19,23 @@ main:
 
     addi a0, x0, 10
     ecall # Exit
-
 factorial:
-    # YOUR CODE HERE
+    
+    addi sp, sp, -4      
+    sw ra, 0(sp)         
+
+    li t1, 1              
+
+   
+loop:
+    mul t1, t1, a0        
+    addi a0, a0, -1       
+    bnez a0, loop      
+
+    mv a0, t1          
+
+  
+    lw ra, 0(sp)          
+    addi sp, sp, 4        
+    ret                   
+
